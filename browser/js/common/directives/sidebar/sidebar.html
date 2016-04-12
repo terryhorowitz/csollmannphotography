@@ -1,17 +1,14 @@
-<header class="nav col col-2 fixed">
+<header class="sidebar fixed">
     <div class="left">
-        <ul class="collections series">
-            <li class="mb2" ui-sref="Featured">PLACES</li>
-            <li class="mb2" ui-sref="Featured">FACES</li>
-            <li class="mb2" ui-sref="Featured">SHAPING SUGAR</li>
-            <li class="mb2" ui-sref="Featured">LIGHTS AND THE BODY</li>
-            <li class="mb2" ui-sref="Featured">COMPOSITES</li>
+        <ul class="collections series" ng-repeat="item in photoSeries">
+            <li class="mb2" ui-sref="{{item.state}}">{{item.label}}</li>
         </ul>
-        <ul class="collections details mt3">
-            <li class="mb2" ui-sref="About">ABOUT</li>
-            <li class="mb2"><a href="https://www.etsy.com/shop/chsphoto">SHOP</a></li>
-            <li class="mb2"><a href="https://www.instagram.com/csollmannphoto/">INSTAGRAM</a></li>
-            <li class="mb2" ui-sref="Contact">CONTACT</li>
+        <br>
+        <ul class="collections details mt3" ng-repeat="detail in moreDetails">
+            <li class="mb2" ui-sref="{{detail.state}}">{{detail.label}}</li>
+        </ul>
+        <ul class="collections details mt3" ng-repeat="ext in externalLinks">
+            <a class="mb2" href="{{ext.extLink}}">{{ext.label}}</a>
         </ul>
     </div>
 </header>

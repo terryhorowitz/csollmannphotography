@@ -1,0 +1,23 @@
+@import 'sidebar';
+
+featured {
+  //margin-left: 200px;
+  margin-top: 6%;
+  margin-bottom: 6%;
+  .col-md-4{
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    min-height: 23rem;
+    min-width: 33%;
+    max-height: 23rem;
+    max-width: 33%;
+  }
+  display: block;
+  img {
+    display: block;
+    width: 100% - sidebar;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    //padding: 0.2rem;
+  }
+}

@@ -1,11 +1,13 @@
+@import '../directives/sidebar';
+
 #home {
   fullstack-logo {
-    padding-top: 30px;
-    width: 150px;
+    padding-top: 1rem;
+    width: 1rem - '../directives/sidebar';
     margin: 0 auto;
   }
   h1 {
-    margin-top: 40px;
+    margin-top: 1rem;
     text-align: center;
   }
 }
