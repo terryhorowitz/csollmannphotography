@@ -1,0 +1,65 @@
+navbar {
+
+  display: block;
+  background: white;
+  border-bottom: 1px solid black;
+  box-shadow: 1px 1px 10px -4px black;
+  height: 60px;
+
+  .container {
+    width: 91%;
+    max-width: 1340px;
+    padding-top: 15px;
+    margin-left: 1em;
+  }
+
+  .nav-header {
+    font-size: 20px;
+    span {
+      color: grey;
+    }
+  }
+
+  a {
+    color: black;
+    font-size: 16px;
+  }
+
+  .nav > li > a {
+    cursor: pointer;
+    transition: color 0.2s;
+    &.active {
+      color: darken(#f31214, 10%);
+    }
+    &:hover {
+      background: none;
+      color: #f31214;
+    }
+    &:focus {
+      background: none;
+    }
+  }
+
+  .login-button {
+    float: right;
+    border: 1px solid black;
+    margin-top: 10px;
+    background: none;
+    outline: none !important;
+  }
+
+  .welcome {
+    float: right;
+    margin-top: 12px;
+    span {
+      color: black;
+      font-size: 16px;
+      margin-right: 5px;
+    }
+    a {
+      color: #f30046;
+      cursor: pointer;
+    }
+  }
+
+}
