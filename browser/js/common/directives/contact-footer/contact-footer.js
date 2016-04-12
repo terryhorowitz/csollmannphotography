@@ -3,7 +3,7 @@
 app.directive('contactFooter', function (){
     return {
         restrict: 'E',
-        templateUrl: 'js/common/directives/contact-footer/contact-footer.html',
+        templateUrl: 'js/common/full-image/full-image.html,
         scope: {}
     }
 })
