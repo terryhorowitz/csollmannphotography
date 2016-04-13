@@ -7,7 +7,7 @@
   @include clearfix;
 
   img {
-    height: 40rem;
+    height: 48rem;
     width: 100%;
     opacity: 0.8;
   }
@@ -15,11 +15,12 @@
   .aboutMe {
     padding-top: 2.5rem;
     padding-right: 2.5rem;
+    font-size: 1.6rem;
   }
 
   .awards {
+    font-size: 1.6rem;
     padding-top: 2.5rem;
-    color: gray;
     padding-bottom: 0.8rem;
   }
 
