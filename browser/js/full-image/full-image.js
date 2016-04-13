@@ -1,6 +1,6 @@
 app.config(function ($stateProvider) {
     $stateProvider.state('FullImageView', {
-        url: '/practiceimgs/:id',
+        url: '/view/:id',
         templateUrl: 'js/full-image/full-image.html',
         scope: {},
         resolve: {
