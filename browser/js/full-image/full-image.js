@@ -12,8 +12,16 @@ app.config(function ($stateProvider) {
     });
 });
 
-app.controller("FullImageCtrl", function ($scope, image){
+app.controller("FullImageCtrl", function ($scope, image, Photos){
 
     $scope.currentImage = image;
+
+    $scope.next = function() {
+        $scope.currentImage = Photos.nextPhoto($scope.currentImage);
+    }
+
+    $scope.prev = function (){
+        $scope.currentImage = Photos.prevPhoto($scope.currentImage);
+    }
 
 });
