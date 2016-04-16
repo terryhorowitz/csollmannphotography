@@ -29,7 +29,7 @@ module.exports.create = (req, res, next) => {
 };
 
 module.exports.addPhoto = (req, res, next) => {
-  let photo = req.body.photo;
+  let photo = req.body;
   req.collection.addPhoto(photo)
     .then((updatedPhotoCollection) => {
       res.status(200).json(updatedPhotoCollection);
