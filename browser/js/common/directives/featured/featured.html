@@ -1,10 +1,10 @@
-<div ng-repeat="photo in photos">
-    <img class="col-md-4" ng-src="/practiceimgs/{{photo}}.jpg" ui-sref="FullImageView({id: photo})"/>
-    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                ...
-            </div>
-        </div>
-    </div>
+<div class="col-md-4" ng-repeat="photo in photos" style="background-image: url('/practiceimgs/{{photo}}.jpg');">
+    <!--<img class="col-md-4 featured" ng-src="/practiceimgs/{{photo}}.jpg" ui-sref="FullImageView({id: photo})"/>-->
+    <!--<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">-->
+        <!--<div class="modal-dialog modal-lg">-->
+            <!--<div class="modal-content">-->
+                <!--...-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
 </div>
