@@ -19,11 +19,23 @@ module.exports.getAll = (req, res, next) => {
     .catch(next);
 };
 
+module.exports.getOne = (req, res) => {
+  res.status(200).json(req.collection)
+};
+
 module.exports.create = (req, res, next) => {
   let collectionOptions = req.body;
   PhotoCollection.create(collectionOptions)
     .then((newPhotoCollection) => {
       res.status(200).json(newPhotoCollection);
+    })
+    .catch(next);
+};
+
+module.exports.delete = (req, res, next) => {
+  req.collection.remove()
+    .then((removedCollection) => {
+      res.status(200).json(removedCollection)
     })
     .catch(next);
 };

@@ -1,3 +1,24 @@
-<pre>{{ allCollections }}</pre>
-
-<photo-upload></photo-upload>
+<div class="container mt4">
+    <div class="row mt3">
+        <md-button class="md-fab md-primary" aria-label="FAB" ui-sref="addCollection">
+            <md-tooltip>
+                Create new collection
+            </md-tooltip>
+            <md-icon md-svg-src="/plus.svg"></md-icon>
+        </md-button>
+    </div>
+    <div class="row">
+        <div class="col-lg-4" ng-repeat="collection in allCollections">
+            <md-card>
+                <img src="/practiceimgs/1.jpg" class="md-card-image" alt="image caption">
+                <md-card-content>
+                    <h2>{{ collection.name }}</h2>
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button class="md-raised">Edit</md-button>
+                    <md-button class="md-raised" ng-click="delete(collection._id)">Delete</md-button>
+                </md-card-actions>
+            </md-card>
+        </div>
+    </div>
+</div>

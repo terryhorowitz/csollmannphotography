@@ -21,6 +21,11 @@ app.factory('PhotoCollection', ($http, $log) => {
         .then(...catcher);
     },
 
+    getOne(id){
+      return $http.get(baseUrl + id)
+        .then(...catcher);
+    },
+
     create(name){
       return $http.post(baseUrl, { name })
         .then(...catcher);
@@ -29,7 +34,13 @@ app.factory('PhotoCollection', ($http, $log) => {
     addPhoto(photo, collectionId) {
       return $http.put(baseUrl + collectionId, { photo })
         .then(...catcher);
+    },
+
+    delete(collectionId) {
+      return $http.delete(baseUrl + collectionId)
+        .then(...catcher);
     }
+
   };
 
 });

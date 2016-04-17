@@ -40,12 +40,11 @@ app.factory('PhotoUpload', ($http, $log, $rootScope) => {
     }
 
     upload(collectionId){
-      return $http.put(baseUrl + collectionId)
+      return $http.put(baseUrl + collectionId, this.file)
         .then(...logger);
     }
 
     fileIsLoaded(){
-      console.log('file is loaded ?', !!this.file);
       return !!this.file;
     }
   }

@@ -1,0 +1,9 @@
+<md-card>
+    <img ng-show="fileIsLoaded()" src="" class="md-card-image" alt="image caption">
+    <md-card-content>
+        <input type="file"/>
+    </md-card-content>
+    <md-card-actions layout="row" layout-align="end center">
+        <md-button ng-click="photoInput.upload(collectionId)" ng-disabled="!fileIsLoaded()">Upload Photo</md-button>
+    </md-card-actions>
+</md-card>
